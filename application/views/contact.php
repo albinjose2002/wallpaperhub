@@ -7,7 +7,9 @@
      
      <!-- Favicon -->
      <link rel="icon" type="image/png" href="<?= base_url('assets/mages/favicon.jpg'); ?>">
-    <link rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/contact.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/style.css');?>">
+
 </head>
 <body>
 
@@ -48,53 +50,4 @@
 </body>
 </html>
 
-<style>
 
-.container {
-    width: 90%;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-}
-
-.contact-form {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.form-group input, 
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.submit-btn {
-    background: #333;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.submit-btn:hover {
-    background: #555;
-}
-
-</style>
