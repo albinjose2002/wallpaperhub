@@ -7,7 +7,7 @@
      
      <!-- Favicon -->
      <link rel="icon" type="image/png" href="<?= base_url('assets/mages/favicon.jpg'); ?>">
-     <link rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>">
+     <link rel="stylesheet" href="<?= base_url('assets/css/about.css'); ?>">
 </head>
 <body>
 
@@ -44,44 +44,3 @@
 </body>
 </html>
 
-<style>
-
-.about-container {
-    width: 80%;
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: center;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.page-title {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.about-description {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-h2 {
-    margin-top: 20px;
-    font-size: 22px;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    font-size: 16px;
-    margin: 8px 0;
-    text-align: left;
-}
-
-</style>
