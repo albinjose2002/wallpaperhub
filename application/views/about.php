@@ -8,6 +8,8 @@
      <!-- Favicon -->
      <link rel="icon" type="image/png" href="<?= base_url('assets/mages/favicon.jpg'); ?>">
      <link rel="stylesheet" href="<?= base_url('assets/css/about.css'); ?>">
+     <link rel="stylesheet" href="<?= base_url('assets/css/style.css');?>">
+
 </head>
 <body>
 
