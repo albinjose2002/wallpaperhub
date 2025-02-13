@@ -1,0 +1,237 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;
+    padding: 10px 20px;
+    height: 100px; /* Adjust based on the logo */
+}
+
+
+.logo img {
+    height: auto; /* Adjusts dynamically */
+    max-height: 2000px; /* Adjust height to fit header */
+    width: auto; /* Maintains aspect ratio */
+    max-width: 250px; /* Adjust as needed */
+    display: block;
+    object-fit: contain; /* Ensures it stays fully visible */
+}
+
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Search Bar Section */
+.search-container {
+    text-align: center;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+.search-container input {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-container button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background: #222;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-container button:hover {
+    background: #444;
+}
+
+/* Ensure full-width slider with proper spacing */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Slider track */
+.slider {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Each slide takes full width */
+.slide {
+    flex: 0 0 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Sorting Section */
+.sort-section {
+    text-align: center;
+    margin: 20px;
+}
+
+.sort-section label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sort-section select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Wallpaper Section */
+.wallpaper-section {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.wallpaper-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #222;
+    text-transform: uppercase;
+}
+
+/* Wallpaper Grid */
+.wallpapers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Each wallpaper box */
+.wallpaper {
+    width: 280px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.wallpaper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Wallpaper Images */
+.wallpaper img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Wallpaper Titles */
+.wallpaper h3 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+/* Wallpaper Descriptions */
+.wallpaper p {
+    font-size: 14px;
+    color: #666;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-logo img {
+    height: 80px; /* Bigger Logo */
+    max-width: 200px;
+    object-fit: contain;
+}
+
+.footer-container p {
+    font-size: 16px;
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wallpapers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wallpaper {
+        width: 90%;
+    }
+
+    .search-container input {
+        width: 60%;
+    }
+}
