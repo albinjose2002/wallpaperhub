@@ -53,5 +53,7 @@ $route['default_controller'] = 'home';
 $route['wallpapers'] = 'wallpapers';
 $route['about'] = 'about';
 $route['contact'] = 'contact';
+$route['register'] = 'auth/register';
+$route['login'] = 'auth/login';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

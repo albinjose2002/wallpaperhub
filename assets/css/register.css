@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 20px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Heading */
+.text-center {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* Button */
+.btn {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.alert-danger {
+    background-color: #ffcccc;
+    color: #d9534f;
+}
+
+.alert-success {
+    background-color: #ccffcc;
+    color: #5cb85c;
+}
+
+/* Login Link */
+.text-center a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}
