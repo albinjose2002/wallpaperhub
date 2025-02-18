@@ -9,7 +9,7 @@
             <li><a href="<?= base_url('wallpapers'); ?>">Wallpapers</a></li>
             <li><a href="<?= base_url('contact'); ?>">Contact</a></li>
             <li>|</li> <!-- Separator -->
-            <li><a href="<?= base_url('login'); ?>">Login</a> / <a href="<?= base_url('signup'); ?>">Signup</a></li>
+            <li><a href="<?= base_url('login'); ?>">Login</a> / <a href="<?= base_url('register'); ?>">Register</a></li>
         </ul>
     </nav>
 </header>

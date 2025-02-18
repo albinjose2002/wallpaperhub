@@ -43,7 +43,7 @@
         <label for="category">Sort by Category:</label>
         <select id="category">
             <option value="all">All</option>
-            <option value="wallpapers">Wallpapers</option>
+            <option value="nature">Nature</option>
             <option value="abstract">Abstract</option>
             <option value="technology">Technology</option>
         </select>
