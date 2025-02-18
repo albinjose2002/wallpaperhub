@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="<?= base_url('assets/css/header.css'); ?>">
+
 <header>
     <div class="logo">
         <a href="<?= base_url(); ?>"><img src="<?= base_url('assets/images/logo.webp'); ?>" alt="Logo"></a>

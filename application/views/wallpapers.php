@@ -79,8 +79,9 @@
     <img id="lightbox-img" class="lightbox-content">
 </div>
 
-    <?php $this->load->view('footer'); ?>
     <script src="<?= base_url('assets/js/wallpaper.js'); ?>"></script>
 
 </body>
+<?php $this->load->view('footer'); ?>
+
 </html>

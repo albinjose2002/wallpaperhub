@@ -14,9 +14,9 @@
     <?php $this->load->view('header'); ?>
 
     <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Search wallpapers...">
-    <button onclick="searchWallpapers()">Search</button>
-</div>
+        <input type="text" id="searchInput" placeholder="Search wallpapers...">
+        <button onclick="searchWallpapers()">Search</button>
+    </div>
 
     <!-- Slider Section -->
     <div class="slider-container">
@@ -48,8 +48,6 @@
             <option value="technology">Technology</option>
         </select>
     </div>
-
-   
 
     <!-- Latest Wallpapers Section -->
     <div class="wallpaper-section">

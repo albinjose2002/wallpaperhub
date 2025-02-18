@@ -1,176 +1,237 @@
-/* Search and Upload Button Container */
-.search-upload-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0; /* Adjust margin as needed */
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-.search-bar {
+/* Header Styles */
+header {
     display: flex;
     align-items: center;
-    gap: 10px; /* Adjust the gap as needed */
-}
-
-#searchInput {
-    width: 300px; /* Adjust width as needed */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.btn {
+    justify-content: space-between;
+    background: #222;
     padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+    height: 100px; /* Adjust based on the logo */
 }
 
-.btn:hover {
-    background-color: #555;
+
+.logo img {
+    height: auto; /* Adjusts dynamically */
+    max-height: 2000px; /* Adjust height to fit header */
+    width: auto; /* Maintains aspect ratio */
+    max-width: 250px; /* Adjust as needed */
+    display: block;
+    object-fit: contain; /* Ensures it stays fully visible */
 }
 
-/* Icon Container */
-.icon-container {
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
     display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
 }
 
-.delete-icon, .download-icon {
-    cursor: pointer;
-    font-size: 20px;
-    color: #333;
-    transition: color 0.3s ease;
+nav ul li {
+    margin: 0 15px;
 }
 
-.delete-icon:hover {
-    color: #dc3545;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
 }
 
-.download-icon:hover {
-    color: #007bff;
+nav ul li a:hover {
+    color: #ffd700;
 }
 
-/* Upload Modal Styling */
-.upload-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.upload-box {
-    width: 400px;
-    background: #fff;
-    padding: 25px;
+/* Search Bar Section */
+.search-container {
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    position: relative;
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { transform: translateY(-10px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 22px;
-    cursor: pointer;
-    color: #333;
-}
-
-.file-input, .form-input {
+    margin: 20px auto;
     width: 100%;
-    padding: 12px;
-    margin: 12px 0;
+    max-width: 600px;
+}
+
+.search-container input {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    outline: none;
 }
 
-.upload-btn {
-    width: 100%;
-    padding: 12px;
-    background: #28a745;
-    color: #fff;
+.search-container button {
+    padding: 10px 15px;
+    font-size: 16px;
     border: none;
-    cursor: pointer;
+    background: #222;
+    color: white;
     border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.upload-btn:hover {
-    background: #218838;
-}
-
-/* Thumbnail Styling */
-.thumbnail {
-    width: 180px;
-    height: 120px;
     cursor: pointer;
-    transition: transform 0.3s ease;
-    border-radius: 8px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
 }
 
-.thumbnail:hover {
-    transform: scale(1.05);
+.search-container button:hover {
+    background: #444;
 }
 
-/* Lightbox Styling */
-.lightbox {
-    display: none;  /* Initially hidden */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
+/* Ensure full-width slider with proper spacing */
+.slider-container {
+    position: relative;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.85); /* Dark background */
+    max-width: 1400px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Slider track */
+.slider {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Each slide takes full width */
+.slide {
+    flex: 0 0 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Sorting Section */
+.sort-section {
     text-align: center;
+    margin: 20px;
+}
+
+.sort-section label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sort-section select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Wallpaper Section */
+.wallpaper-section {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.wallpaper-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #222;
+    text-transform: uppercase;
+}
+
+/* Wallpaper Grid */
+.wallpapers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Each wallpaper box */
+.wallpaper {
+    width: 280px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.wallpaper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Wallpaper Images */
+.wallpaper img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Wallpaper Titles */
+.wallpaper h3 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+/* Wallpaper Descriptions */
+.wallpaper p {
+    font-size: 14px;
+    color: #666;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding: 15px 0;
+    display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.3s ease-in-out;
 }
 
-.lightbox-content {
-    max-width: 90%;
-    max-height: 90vh;
-    border-radius: 10px;
-    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5);
-    animation: zoomIn 0.3s ease-in-out;
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-@keyframes zoomIn {
-    from { transform: scale(0.9); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+.footer-logo img {
+    height: 80px; /* Bigger Logo */
+    max-width: 200px;
+    object-fit: contain;
 }
 
-.close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: white;
-    font-size: 35px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease;
+.footer-container p {
+    font-size: 16px;
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
 }
 
-.close:hover {
-    color: red;
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wallpapers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wallpaper {
+        width: 90%;
+    }
+
+    .search-container input {
+        width: 60%;
+    }
 }
