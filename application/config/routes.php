@@ -55,5 +55,9 @@ $route['about'] = 'about';
 $route['contact'] = 'contact';
 $route['register'] = 'auth/register';
 $route['login'] = 'auth/login';
+
+$route['admin'] = 'admin/dashboard';
+$route['admin/wallpapers'] = 'admin/wallpapers';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

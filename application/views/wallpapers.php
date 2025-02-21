@@ -33,21 +33,22 @@
 
     <!-- Upload Modal -->
     <div id="uploadModal" class="upload-modal">
-        <div class="upload-box">
-            <span class="close-btn">&times;</span>
-            <h3>Upload Wallpaper</h3>
-            <?php echo form_open_multipart('wallpapers/upload_image'); ?>
-                <input type="text" name="title" placeholder="Enter title" class="form-input">
-                <select name="category" class="form-input">
-                    <option value="wallpapers">Wallpapers</option>
-                    <option value="abstract">Abstract</option>
-                    <option value="technology">Technology</option>
-                </select>
-                <input type="file" name="image" accept="image/*" class="file-input">
-                <button type="submit" class="upload-btn">Upload</button>
-            </form>
-        </div>
+    <div class="upload-box">
+        <span class="close-btn">&times;</span>
+        <h3>Upload Wallpaper</h3>
+        <?php echo form_open_multipart('wallpapers/upload_image'); ?>
+            <input type="text" name="title" placeholder="Enter title" class="form-input">
+            <select name="category" class="form-input">
+                <option value="wallpapers">Wallpapers</option>
+                <option value="abstract">Abstract</option>
+                <option value="technology">Technology</option>
+            </select>
+            <input type="file" name="image" accept="image/*" class="file-input">
+            <button type="submit" class="upload-btn">Upload</button>
+        </form>
     </div>
+</div>
+
 
   <!-- Latest Wallpapers Section -->
 <div class="wallpaper-section">
@@ -63,7 +64,7 @@
                     <h3><?= $wallpaper['title']; ?></h3>
                     <div class="icon-container">
                         <i class="fas fa-download download-icon" onclick="downloadImage('<?= base_url('assets/uploads/' . $wallpaper['image']); ?>')"></i>
-                        <i class="fas fa-trash-alt delete-icon" onclick="deleteImage('<?= $wallpaper['id']; ?>')"></i>
+                        <i class="fas fa-trash-alt delete-icon" data-id="<?= $wallpaper['id']; ?>" onclick="deleteImage(this)"></i>
                     </div>
                 </div>
             <?php endforeach; ?>
@@ -79,8 +80,14 @@
     <img id="lightbox-img" class="lightbox-content">
 </div>
 
-    <?php $this->load->view('footer'); ?>
     <script src="<?= base_url('assets/js/wallpaper.js'); ?>"></script>
 
 </body>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+
+<?php $this->load->view('footer'); ?>
+
 </html>
