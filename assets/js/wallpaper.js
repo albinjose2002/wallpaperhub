@@ -59,11 +59,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Function to delete image
-    window.deleteImage = function (imageId) {
-        // Your delete image logic here
-        // Example: Send an AJAX request to delete the image
-        console.log("Delete image with ID: " + imageId);
-        // You can also remove the image element from the DOM if deletion is successful
+    window.deleteImage = function (element) {
+        // Remove the image element from the DOM
+        var wallpaperDiv = element.closest('.wallpaper');
+        if (wallpaperDiv) {
+            wallpaperDiv.remove();
+        }
     };
 
     // Function to download image

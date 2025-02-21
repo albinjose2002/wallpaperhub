@@ -44,4 +44,17 @@ class Wallpapers extends CI_Controller {
             redirect('wallpapers');
         }
     }
+
+    public function delete_image($id) {
+        $this->load->model('Wallpaper_model');
+        $result = $this->Wallpaper_model->delete_image($id);
+        
+        if ($result) {
+            echo json_encode(['success' => true]);
+        } else {
+            echo json_encode(['success' => false, 'message' => 'Failed to delete image.']);
+        }
+    }
+    
+    
 }
