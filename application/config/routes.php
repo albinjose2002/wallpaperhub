@@ -56,8 +56,12 @@ $route['contact'] = 'contact';
 $route['register'] = 'auth/register';
 $route['login'] = 'auth/login';
 
-$route['admin'] = 'admin/dashboard';
-$route['admin/wallpapers'] = 'admin/wallpapers';
+// Dynamic CRUD Routes
+$route['dynamic'] = 'dynamic/index';
+$route['dynamic/save'] = 'dynamic/save';
 
+$route['admin'] = 'admin/dashboard';
+$route['admin/admin_wallpapers'] = 'admin/admin_wallpapers';
+$route['admin/admin_login'] = 'admin/admin_login';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

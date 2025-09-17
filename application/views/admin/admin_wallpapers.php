@@ -9,6 +9,13 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
 	<link rel="stylesheet" href="../assets/css/ready.css">
 	<link rel="stylesheet" href="../assets/css/demo.css">
+
+	 <!-- Favicon -->
+	 <link rel="icon" type="image/png" href="<?= base_url('assets/images/favicon.jpg'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/wallpaper.css'); ?>">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 	<div class="wrapper">
@@ -104,13 +111,13 @@
 							</ul>
 						</li>
 						<li class="nav-item dropdown">
-							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/profile.jpg" alt="user-img" width="36" class="img-circle"><span >Hizrian</span></span> </a>
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/profile.jpg" alt="user-img" width="36" class="img-circle"><span >Albin</span></span> </a>
 							<ul class="dropdown-menu dropdown-user">
 								<li>
 									<div class="user-box">
 										<div class="u-img"><img src="assets/img/profile.jpg" alt="user"></div>
 										<div class="u-text">
-											<h4>Hizrian</h4>
+											<h4>Albin</h4>
 											<p class="text-muted">hello@themekita.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
 										</div>
 									</li>
@@ -138,7 +145,7 @@
 						<div class="info">
 							<a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 								<span>
-									Hizrian
+									Albin
 									<span class="user-level">Administrator</span>
 									<span class="caret"></span>
 								</span>
@@ -217,12 +224,81 @@
 					<div class="container-fluid">
 						<h4 class="page-title">Wallpapers</h4>
 
+						<div class="search-upload-container">
+        <input type="text" id="searchInput" placeholder="Search wallpapers...">
+        <button class="btn" onclick="searchWallpapers()">Search</button>
+        <button id="uploadBtn" class="btn">Upload Image</button>
+    </div>
+
+    <!-- Flash Messages -->
+    <?php if($this->session->flashdata('success')): ?>
+        <div class="alert alert-success"><?= $this->session->flashdata('success'); ?></div>
+    <?php endif; ?>
+
+    <?php if($this->session->flashdata('error')): ?>
+        <div class="alert alert-danger"><?= $this->session->flashdata('error'); ?></div>
+    <?php endif; ?>
+
+    <!-- Upload Modal -->
+    <div id="uploadModal" class="upload-modal">
+    <div class="upload-box">
+        <span class="close-btn">&times;</span>
+        <h3>Upload Wallpaper</h3>
+        <?php echo form_open_multipart('wallpapers/upload_image'); ?>
+            <input type="text" name="title" placeholder="Enter title" class="form-input">
+            <select name="category" class="form-input">
+                <option value="wallpapers">Wallpapers</option>
+                <option value="abstract">Abstract</option>
+                <option value="technology">Technology</option>
+            </select>
+            <input type="file" name="image" accept="image/*" class="file-input">
+            <button type="submit" class="upload-btn">Upload</button>
+        </form>
+    </div>
+</div>
+
+
+  <!-- Latest Wallpapers Section -->
+<div class="wallpaper-section">
+    <h2>Latest Wallpapers</h2>
+    <div class="wallpapers">
+        <?php if (!empty($wallpapers)): ?>
+            <?php foreach ($wallpapers as $wallpaper): ?>
+                <div class="wallpaper <?= $wallpaper['category']; ?>">
+                    <img src="<?= base_url('assets/uploads/' . $wallpaper['image']); ?>" 
+                         alt="<?= $wallpaper['title']; ?>" 
+                         class="thumbnail"
+                         onclick="openLightbox('<?= base_url('../assets/uploads/' . $wallpaper['image']); ?>')">
+                    <h3><?= $wallpaper['title']; ?></h3>
+                    <div class="icon-container">
+                        <i class="fas fa-download download-icon" onclick="downloadImage('<?= base_url('../assets/uploads/' . $wallpaper['image']); ?>')"></i>
+                        <i class="fas fa-trash-alt delete-icon" data-id="<?= $wallpaper['id']; ?>" onclick="deleteImage(this)"></i>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p>No wallpapers found.</p>
+        <?php endif; ?>
+    </div>
+</div>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" class="lightbox-content">
+</div>
+
+
+
                         
 						
 							
 								
 		
 </body>
+    <script src="../assets/js/wallpaper.js"></script>
+
+
 <script src="../assets/js/core/jquery.3.2.1.min.js"></script>
 <script src="../assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 <script src="../assets/js/core/popper.min.js"></script>
